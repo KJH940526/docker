@@ -18,7 +18,7 @@ const App =(props)=>{
   );
 
   return (
-  <div>
+  <>
     {title ? <h1>{title}</h1> : <h1>Something is wrong</h1>}
     <hr/>
     <ul>
@@ -41,7 +41,7 @@ const App =(props)=>{
     <Route path={'/Result'} component={Result}/> 
     <Route path={'/About'} component={About}/> 
     <Route path={'/SurveyForm'} component={SurveyForm}/> 
-  </div>
+  </>
   );
 };
 
