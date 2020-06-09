@@ -22,19 +22,21 @@ const SurveyForm = () => {
         .then(res => res.json())//리턴된 res중 res.json을 다시리턴
         .then(data => setResult(data.result)) //리턴시킨json을 인수로해서 setResult에 넣는것
     }
-
     return (
         <div>
-            
            <form onSubmit={handleSubmit}>
-                <label>남자<input type='radio' name='gender' value='남자'/></label>
-                <label>여자<input type='radio' name='gender' value='여자'/></label><br/><br/>
-                <label>호랑이<input type='radio' name='animal' value='호랑이'/></label>
-                <label>코끼리<input type='radio' name='animal' value='코끼리'/></label><br/><br/>
-                <p><button type='submit'>제출</button></p>
+               <h2>
+                   <label>남자<input type='radio' name='gender' value='남자'/></label>
+                    <label>여자<input type='radio' name='gender' value='여자'/></label>
+                </h2>
+                <h2>
+                    <label>호랑이<input type='radio' name='animal' value='호랑이'/></label>
+                    <label>코끼리<input type='radio' name='animal' value='코끼리'/></label>
+                </h2>
+                {result ===null ? <p><button type='submit'>제출</button></p> : null}     
            </form>
-           <h3>{data.gender!=='' ? "당신이 선택한 것은 : "+data.gender+', '+data.animal: null}</h3><br/>
-           <h3>{result===0 ? "제출 성공" : (result===null ? null: '제출실패')}</h3>
+           <h3>{data.gender!=='' ? "당신이 선택한 것은 : "+data.gender+', '+data.animal: null}</h3>
+           <h3>{result===0 ? "제출완료" : (result===null ? null: '제출실패' )}</h3>
         </div>
     );
 };
