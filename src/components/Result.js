@@ -4,7 +4,7 @@ const Result = () => {
 
     const [count, setCount] = useState({})
     useEffect(() => {
-        fetch('http://localhost:3002/api/result')
+        fetch('http://3.21.105.37:3002/api/result')
         .then(res => res.json())
         .then(data => setCount(data.count))}
         , []
