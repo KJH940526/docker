@@ -55,7 +55,6 @@ router.get('/result', function(req, res){
           res.send({ count: result[0] });
         }
       );
-
 });
 
 module.exports = router;
