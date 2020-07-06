@@ -14,4 +14,4 @@ app.use('/api', api);
 
 const port = 3002;
 
-app.listen(port, ()=>console.log('http://3.21.105.37:'+port));
+app.listen(port, ()=>console.log('http://localhost:'+port));

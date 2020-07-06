@@ -13,7 +13,7 @@ const SurveyForm = () => {
         //event 속성을 직접적으로 비동기 함수에 적용할 때 발생하는 에러가 발생한다.
         setData(()=>({gender : g, animal : a}))
 
-        fetch('http://3.21.105.37:3002/api/input',
+        fetch('http://localhost:3002/api/input',
             {
                 method: 'POST',
                 body: JSON.stringify({gender : g, animal : a}),
